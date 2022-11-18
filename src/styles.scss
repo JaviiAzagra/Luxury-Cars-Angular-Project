@@ -1,1 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+$font_family: "Lucida Sans";
+
+* {
+  font-family: $font_family;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.model {
+  text-transform: capitalize;
+}
+
+.lambo-card {
+  text-align: center;
+  width: 350px;
+  height: 250px;
+  margin: 30px;
+  border-bottom: solid 2px rgb(161, 161, 161);
+  color: rgb(0, 0, 0);
+}
+
+.lambo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.lambo-card h2 {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 0;
+}
+
+.img-container img {
+  width: 340px;
+  height: 170px;
+}
+
+.lambo-card:hover {
+  border-radius: 16px;
+  box-shadow: 0 0px 15px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  background-color: white;
+  font-size: 15px;
+  border: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 60px;
+  text-align: center;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.search {
+  text-align: center;
+
+}
+
+.line{
+  padding: 20px;
+  border-bottom: solid 2px rgb(161, 161, 161);
+}
+
+.search-cars {
+  border-radius: 16px;
+  border: solid 1px rgb(176, 176, 176);
+  height: 40px;
+  width: 200px;
+}
+
+input::placeholder{
+  text-align: center;
+  font-size: 16px;
+}
+
+
