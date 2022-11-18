@@ -9,13 +9,18 @@
 a {
   padding: 10px;
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 a:hover {
   text-decoration: underline;
+  color: #dcb05e;
 }
 
 nav {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+}
+
+.logo-img{
+  width: 100px;
 }
