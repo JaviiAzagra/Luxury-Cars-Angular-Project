@@ -13,6 +13,7 @@ import { LamborghiniDetailsComponent } from './pages/lamborghini-details/lamborg
 import { NewCarComponent } from './pages/new-car/new-car.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     LamborghiniDetailsComponent,
     NewCarComponent,
     NavbarComponent,
+    FooterComponent,
 
   ],
   imports: [
