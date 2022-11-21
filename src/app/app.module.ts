@@ -12,8 +12,9 @@ import { FerrariDetailsComponent } from './pages/ferrari-details/ferrari-details
 import { LamborghiniDetailsComponent } from './pages/lamborghini-details/lamborghini-details.component';
 import { NewCarComponent } from './pages/new-car/new-car.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
+import { UpdateLamborghiniComponent } from './pages/update-lamborghini/update-lamborghini.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +28,15 @@ import { FooterComponent } from './components/footer/footer.component';
     NewCarComponent,
     NavbarComponent,
     FooterComponent,
+    UpdateLamborghiniComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

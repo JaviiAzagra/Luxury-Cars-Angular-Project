@@ -1,0 +1,26 @@
+<form class="update-form" [formGroup]="carForm" (ngSubmit)="onSubmit()" >
+    <h1>Editar Lamborghini</h1>
+    <p>Model:</p>
+    <select formControlName="model">
+      <option>aventador</option>
+      <option>huracan</option>
+      <option>urus</option>
+      <option>diablo</option>
+      <option>gallardo</option>
+      <option>murcielago</option>
+      <option>limited series</option>
+    </select>
+    <p>Name:</p>
+    <input type="text" formControlName="name"/>
+    <p>Price:</p>
+    <input type="text" formControlName="price"/>
+    <p>Power (CV):</p>
+    <input type="text" formControlName="power_cv"/>
+    <p>Max Speed:</p>
+    <input type="text" formControlName="max_speed"/>
+    <p>Imagen:</p>
+    <input class="file" type="file" formControlName="img" (change)="onFileChange($event)"/>
+    <div class="boton">
+      <button>Add</button>
+    </div>
+  </form>

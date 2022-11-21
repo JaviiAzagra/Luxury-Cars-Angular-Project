@@ -1,3 +1,4 @@
+import { UpdateLamborghiniComponent } from './pages/update-lamborghini/update-lamborghini.component';
 import { FerrariDetailsComponent } from './pages/ferrari-details/ferrari-details.component';
 import { LamborghiniDetailsComponent } from './pages/lamborghini-details/lamborghini-details.component';
 import { LamborghiniComponent } from './pages/lamborghini/lamborghini.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: "ferrari", component: FerrariComponent},
   {path: "ferrari/:id", component: FerrariDetailsComponent},
   {path: "contact", component: ContactComponent},
-  {path: "newcar", component: NewCarComponent}
+  {path: "newcar", component: NewCarComponent},
+  {path: "updateLamborghini/:id", component: UpdateLamborghiniComponent}
 ];
 
 @NgModule({

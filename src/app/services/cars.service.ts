@@ -34,6 +34,13 @@ export class CarsService {
   public postFerrari(newFerrari:any){
     return this.http.post("https://lamborghini-ferrari-api.vercel.app/ferrari/create", newFerrari)
   }
+  public putLamborghini(_id: string, updatedLamborghini:any){
+    return this.http.put("http://localhost:3000/lamborghini/edit/" + _id, updatedLamborghini)
+  }
+  public deleteLamborghini(_id: string){
+    return this.http.delete("https://lamborghini-ferrari-api.vercel.app/lamborghini/delete/" +_id)
+  }
+
 
 }
 

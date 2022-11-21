@@ -1,5 +1,7 @@
 import { CarsService } from './../../services/cars.service';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-car',
@@ -23,19 +25,50 @@ export class NewCarComponent implements OnInit {
     max_speed: "",
     img: ""
   }
-  constructor(private lamborghiniService: CarsService) { 
+
+  carForm!: FormGroup;
+
+  constructor(private carService: CarsService, private formBuilder: FormBuilder, private router: Router) { 
   }
 
   ngOnInit(): void {
+    this.carForm = this.formBuilder.group({
+      model: ["", [Validators.required]],
+      name: ["", [Validators.required]],
+      price: ["", [Validators.required]],
+      power_cv: ["", [Validators.required]],
+      max_speed: ["", [Validators.required]],
+      img: ["", [Validators.required]],
+    })
+    this.carForm.valueChanges.subscribe((changes) => {
+      this.newLamborghini = changes;
+    })
   }
 
-  enviarLamborghini(){
-    console.log(this.newLamborghini);
-    this.lamborghiniService.postLamborghini(this.newLamborghini).subscribe();
+  onFileChange(event:any){
+    const file = event.target.files[0];
+    console.log(file);
+    this.carForm.patchValue({
+      img: file
+    })
   }
-  enviarFerrari(){
+
+  onSubmitLamborghini(){
+    console.log(this.newLamborghini);
+    const formData = new FormData;
+    formData.append("model", this.carForm.get("model")?.value);
+    formData.append("name", this.carForm.get("name")?.value);
+    formData.append("price", this.carForm.get("price")?.value);
+    formData.append("power_cv", this.carForm.get("power_cv")?.value);
+    formData.append("max_speed", this.carForm.get("max_speed")?.value);
+    formData.append("img", this.carForm.get("img")?.value);
+    console.log(formData);
+    this.carService.postLamborghini(formData).subscribe(() => this.router.navigate(["/lamborghini"]));
+  }
+  onSubmitFerrari(){
     console.log(this.newFerrari);
-    this.lamborghiniService.postFerrari(this.newFerrari).subscribe();
+    /* this.carService.postFerrari(this.newFerrari).subscribe(); */
+    this.router.navigate(["/ferrari"])
   }
 
 }

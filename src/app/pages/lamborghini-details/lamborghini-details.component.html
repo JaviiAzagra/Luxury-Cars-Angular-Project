@@ -9,5 +9,8 @@
     <div class="btn-container">
         <button class="btn-details" routerLink="/lamborghini">Volver a todos los coches</button>
     </div>
+    <button class="btn-details" routerLink="/updateLamborghini/{{myLamborghini?._id}}">Update</button>
+    <button class="btn-details" (click)="deleteLamborghini()">Delete</button>
+    
 </div>
 </div>
