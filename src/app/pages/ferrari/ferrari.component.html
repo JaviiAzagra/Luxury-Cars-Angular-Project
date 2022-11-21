@@ -1,9 +1,16 @@
 <div class="ferrari">
-    <h1>Ferrari</h1>
+    <!-- <h1>Ferrari</h1> -->
 </div>
 
 <!-- <img src="https://www.optionstheedge.com/sites/default/files/styles/banner/public/field/featured-image/2021/01_ferrari_296_gtb_34_ant.jpg?itok=4MBWTPZG" alt="header"> -->
 <div class="container">
+    <img
+  *ngIf="!myFerraris"   
+  width="200px"
+  src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/02b374101705095.5f24d5db1096f.gif"
+  alt="gif loading"
+/>
+<h3 *ngIf="!myFerraris">Cargando todos los coches</h3>
 <div class="lambo-card" *ngFor= "let item of myFerraris" >
     <div class="title-container">
         <h2 class="model">{{item.model}}</h2>

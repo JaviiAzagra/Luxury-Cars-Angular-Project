@@ -10,6 +10,7 @@ export class CarsService {
   constructor(private http: HttpClient) { }
 
   //Funciones para hacer el CRUD
+  
 
   public getAllLamborghini(): Observable<any> {
     return this.http.get("https://lamborghini-ferrari-api.vercel.app/lamborghini");
@@ -26,6 +27,13 @@ export class CarsService {
   public getFerrari(_id:string): Observable<any> {
     return this.http.get("https://lamborghini-ferrari-api.vercel.app/ferrari/" + _id);
   };
+
+  public postLamborghini(newLamborghini:any){
+    return this.http.post("https://lamborghini-ferrari-api.vercel.app/lamborghini/create", newLamborghini)
+  }
+  public postFerrari(newFerrari:any){
+    return this.http.post("https://lamborghini-ferrari-api.vercel.app/ferrari/create", newFerrari)
+  }
 
 }
 

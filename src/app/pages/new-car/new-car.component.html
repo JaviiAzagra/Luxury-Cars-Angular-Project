@@ -1,1 +1,70 @@
-<p>new-car works!</p>
+<div class="new-lambo">
+  <h1>Añadir nuevo Lamborghini</h1>
+
+  <label>
+    <p>Model:</p>
+    <select [(ngModel)]="newLamborghini.model">
+      <option>aventador</option>
+      <option>huracan</option>
+      <option>urus</option>
+      <option>diablo</option>
+      <option>gallardo</option>
+      <option>murcielago</option>
+      <option>limited series</option>
+    </select>
+  </label>
+
+  <label>
+    <p>Name:</p>
+    <input type="text" [(ngModel)]="newLamborghini.name" />
+  </label>
+
+  <label>
+    <p>Price:</p>
+    <input type="text" [(ngModel)]="newLamborghini.price" />
+  </label>
+
+  <label>
+    <p>Power CV:</p>
+    <input type="number" [(ngModel)]="newLamborghini.power_cv" />
+  </label>
+
+  <label>
+    <p>Max Speed:</p>
+    <input type="text" [(ngModel)]="newLamborghini.max_speed" />
+  </label>
+
+  <label>
+    <p>Imagen:</p>
+    <input type="text" [(ngModel)]="newLamborghini.img" />
+  </label>
+
+  <button (click)="enviarLamborghini()">Add</button>
+</div>
+
+<div class="new-ferrari">
+  <h1>Añadir nuevo Ferrari</h1>
+
+  <p>Model:</p>
+  <select [(ngModel)]="newFerrari.model">
+    <option>Roma</option>
+    <option>296</option>
+    <option>sf90</option>
+    <option>F8</option>
+    <option>Portofino</option>
+    <option>812</option>
+    <option>limited series</option>
+  </select>
+  Name:
+  <input type="text" [(ngModel)]="newFerrari.name" />
+  Price:
+  <input type="text" [(ngModel)]="newFerrari.price" />
+  Power (CV):
+  <input type="number" [(ngModel)]="newFerrari.power_cv" />
+  Max Speed:
+  <input type="text" [(ngModel)]="newFerrari.max_speed" />
+  Imagen:
+  <input type="text" [(ngModel)]="newFerrari.img" />
+
+  <button (click)="enviarFerrari()">Add</button>
+</div>

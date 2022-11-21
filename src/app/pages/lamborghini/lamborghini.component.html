@@ -1,5 +1,5 @@
 <div class="lambo">
-    <h1 class="title">LAMBORGHINI</h1>
+    <!-- <h1 class="title">LAMBORGHINI</h1> -->
 </div>
 
 <!-- <img src="https://www.novitecgroup.com/assets/images/news/lamborghini/huracan-sto/header-lambo__FocusFillWzE5MjAsNjAwLGZhbHNlLDBd.jpg" alt="header"> -->
@@ -9,13 +9,20 @@
 </div> -->
 <!-- <div class="line"></div> -->
 <div class="container">
-<div class="lambo-card" *ngFor= "let item of myLamborghinis" >
+<img
+  *ngIf="!myLamborghinis"   
+  width="200px"
+  src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/02b374101705095.5f24d5db1096f.gif"
+  alt="gif loading"
+/>
+<h1 *ngIf="!myLamborghinis">Cargando todos los coches</h1>
+<div routerLink="/lamborghini/{{item._id}}" class="lambo-card" *ngFor= "let item of myLamborghinis" >
     <div class="title-container">
         <h2 class="model">{{item.model}}</h2>
         <p>{{item.name}}</p>
     </div>
     <div class="img-container">
-        <img routerLink="/lamborghini/{{item._id}}" class="lambo-card-img" src="{{item.img}}" alt="{{item.name}}">
+        <img class="lambo-card-img" src="{{item.img}}" alt="{{item.name}}">
     </div>
     <!-- <button class="button" routerLink="/lamborghini/{{item._id}}">Mas detalles</button> -->
 </div>
