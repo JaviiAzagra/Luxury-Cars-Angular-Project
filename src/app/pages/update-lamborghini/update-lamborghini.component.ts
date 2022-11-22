@@ -52,7 +52,6 @@ export class UpdateLamborghiniComponent implements OnInit {
 
   onSubmit(){
     console.log(this.updatedLamborghini);
-    /* const formData =JSON.stringify(this.carForm.value); */
     const formData = new FormData();
     formData.append("model", this.carForm.get("model")?.value);
     formData.append("name", this.carForm.get("name")?.value);
@@ -60,8 +59,8 @@ export class UpdateLamborghiniComponent implements OnInit {
     formData.append("power_cv", this.carForm.get("power_cv")?.value);
     formData.append("max_speed", this.carForm.get("max_speed")?.value);
     formData.append("img", this.carForm.get("img")?.value);
-    console.log(formData)
     this.carService.putLamborghini(this._id, formData).subscribe(() => this.router.navigate(['/lamborghini']))
+    /* this.carService.putLamborghini(this._id, this.updatedLamborghini).subscribe(() => this.router.navigate(['/lamborghini'])) */
   }
 
 }

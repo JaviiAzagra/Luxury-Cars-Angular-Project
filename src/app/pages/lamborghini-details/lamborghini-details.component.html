@@ -1,16 +1,17 @@
 <div class="detail-container">
     <h1 class="model">{{myLamborghini?.model}}</h1>
     <p>{{myLamborghini?.name}}</p>
-    <img src="{{myLamborghini?.img}}" alt="{{myLamborghini?.name}}">
+    <img class="img-details" src="{{myLamborghini?.img}}" alt="{{myLamborghini?.name}}">
     <div class="details">
     <p>Precio: {{myLamborghini?.price}} €</p>
     <p>Caballos de Potencia: {{myLamborghini?.power_cv}} CV</p>
     <p>Velocidad Máxima: {{myLamborghini?.max_speed}}</p>
+
     <div class="btn-container">
         <button class="btn-details" routerLink="/lamborghini">Volver a todos los coches</button>
+        <button class="btn-details" routerLink="/updateLamborghini/{{myLamborghini?._id}}">Update</button>
+        <button class="btn-details" (click)="deleteLamborghini()">Delete</button>
     </div>
-    <button class="btn-details" routerLink="/updateLamborghini/{{myLamborghini?._id}}">Update</button>
-    <button class="btn-details" (click)="deleteLamborghini()">Delete</button>
-    
 </div>
+
 </div>

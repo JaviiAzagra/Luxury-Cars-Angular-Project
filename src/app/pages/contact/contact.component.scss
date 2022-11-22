@@ -1,0 +1,37 @@
+.contact{
+    color: white;
+    border-top: solid 1px #dcb05e;
+    padding: 50px;
+    text-align: center;
+}
+*{
+    padding: 10px;
+}
+
+input{
+    border:#dcb05e 1px solid;
+    color: white;
+    border-radius: 14px;
+    width: 500px;
+    text-align: center;
+}
+
+button{
+    color: white;
+    border-bottom: #dcb05e 1px solid;
+    border-radius: 14px
+}
+
+button:hover{
+    border: #dcb05e 1px solid;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.message{
+    height: 70px;
+}

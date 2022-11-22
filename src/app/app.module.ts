@@ -15,6 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 import { UpdateLamborghiniComponent } from './pages/update-lamborghini/update-lamborghini.component';
+import { UpdateFerrariComponent } from './pages/update-ferrari/update-ferrari.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { UpdateLamborghiniComponent } from './pages/update-lamborghini/update-la
     NewCarComponent,
     NavbarComponent,
     FooterComponent,
-    UpdateLamborghiniComponent
+    UpdateLamborghiniComponent,
+    UpdateFerrariComponent
 
   ],
   imports: [

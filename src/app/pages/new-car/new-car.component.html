@@ -1,30 +1,3 @@
-<!-- <div class="new-ferrari">
-  <h1>Añadir nuevo Ferrari</h1>
-
-  <p>Model:</p>
-  <select [(ngModel)]="newFerrari.model">
-    <option>Roma</option>
-    <option>296</option>
-    <option>sf90</option>
-    <option>F8</option>
-    <option>Portofino</option>
-    <option>812</option>
-    <option>limited series</option>
-  </select>
-  Name:
-  <input type="text" [(ngModel)]="newFerrari.name" />
-  Price:
-  <input type="text" [(ngModel)]="newFerrari.price" />
-  Power (CV):
-  <input type="number" [(ngModel)]="newFerrari.power_cv" />
-  Max Speed:
-  <input type="text" [(ngModel)]="newFerrari.max_speed" />
-  Imagen:
-  <input type="text" [(ngModel)]="newFerrari.img" />
-
-  <button (click)="onSubmitFerrari()">Add</button>
-</div> -->
-
 <form class="new-lambo" [formGroup]="carForm" (ngSubmit)="onSubmitLamborghini()">
   <h1>Añadir nuevo Lamborghini</h1>
   <p>Model:</p>
@@ -35,6 +8,33 @@
     <option>diablo</option>
     <option>gallardo</option>
     <option>murcielago</option>
+    <option>limited series</option>
+  </select>
+  <p>Name:</p>
+  <input type="text" formControlName="name"/>
+  <p>Price:</p>
+  <input type="text" formControlName="price"/>
+  <p>Power (CV):</p>
+  <input type="text" formControlName="power_cv"/>
+  <p>Max Speed:</p>
+  <input type="text" formControlName="max_speed"/>
+  <p>Imagen:</p>
+  <input class="file" type="file" formControlName="img" (change)="onFileChange($event)"/>
+  <div class="boton">
+    <button>Add</button>
+  </div>
+</form>
+
+<form class="new-lambo" [formGroup]="carForm" (ngSubmit)="onSubmitFerrari()">
+  <h1>Añadir nuevo Ferrari</h1>
+  <p>Model:</p>
+  <select formControlName="model">
+    <option>Roma</option>
+    <option>296</option>
+    <option>sf90</option>
+    <option>F8</option>
+    <option>Portofino</option>
+    <option>812</option>
     <option>limited series</option>
   </select>
   <p>Name:</p>

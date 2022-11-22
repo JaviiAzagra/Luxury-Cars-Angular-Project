@@ -67,8 +67,15 @@ export class NewCarComponent implements OnInit {
   }
   onSubmitFerrari(){
     console.log(this.newFerrari);
-    /* this.carService.postFerrari(this.newFerrari).subscribe(); */
-    this.router.navigate(["/ferrari"])
+    const formData = new FormData;
+    formData.append("model", this.carForm.get("model")?.value);
+    formData.append("name", this.carForm.get("name")?.value);
+    formData.append("price", this.carForm.get("price")?.value);
+    formData.append("power_cv", this.carForm.get("power_cv")?.value);
+    formData.append("max_speed", this.carForm.get("max_speed")?.value);
+    formData.append("img", this.carForm.get("img")?.value);
+    console.log(formData);
+    this.carService.postFerrari(formData).subscribe(() => this.router.navigate(["/ferrari"]));
   }
 
 }

@@ -1,5 +1,5 @@
 import { CarsService } from './../../services/cars.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,7 +12,7 @@ export class FerrariDetailsComponent implements OnInit{
   _id:any;
   myFerrari: any;
 
-  constructor(private activatedRoute: ActivatedRoute, private ferrariService: CarsService){
+  constructor(private activatedRoute: ActivatedRoute, private ferrariService: CarsService, private router: Router){
     this.activatedRoute.paramMap.subscribe((params) => {
       this._id = params.get("id");
       this.ferrariService.getFerrari(this._id).subscribe((data: any) => {
@@ -24,6 +24,10 @@ export class FerrariDetailsComponent implements OnInit{
 
   ngOnInit(): void {
 
+  }
+
+  deleteFerrari(){
+    this.ferrariService.deleteFerrari(this._id).subscribe(()=> this.router.navigate(['/ferrari']))
   }
 
 }
