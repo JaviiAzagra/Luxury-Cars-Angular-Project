@@ -32,25 +32,17 @@ iframe{
     .title{
         font-size: 10px;
     }
-
     .video-home{
         display: flex;
         justify-content: center;
     }
-    .container-video{
-        width: 350px;
-    }
     .container-home{
-        max-width: 350px;
-    }
-    .home{
-        max-width: 360px;
+        text-align: center;
+        padding: 20px;
     }
     .img-home{
         width: 300px;
+        
     }
-  }
 
-*{
-    padding: 10px;
-}
+  }

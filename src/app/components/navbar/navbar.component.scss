@@ -1,7 +1,7 @@
 .nav {
   display: flex;
-  justify-content: space-between;
-  padding: 10px;
+  gap: 10px;
+  justify-content: center;
   font-weight: bold;
 }
 
@@ -58,11 +58,14 @@ nav {
     display: flex;
     flex-direction: column;
   }
-  .container-nav{
-    max-width: 360px;
-  }
+
   a{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .nav a{
+    padding: 1em;
   }
   .logo{
     display: flex;
