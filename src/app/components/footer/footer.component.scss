@@ -6,3 +6,13 @@
     justify-content: center;
     align-items: center;
 }
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: underline;
+}

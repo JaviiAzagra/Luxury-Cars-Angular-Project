@@ -35,3 +35,8 @@
     width: 40%;
 }
 
+@media screen and (max-width: 400px) { 
+    .img-details{
+        width: 300px;
+    }
+}

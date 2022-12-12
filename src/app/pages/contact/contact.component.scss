@@ -16,6 +16,14 @@ input{
     text-align: center;
 }
 
+textarea{
+    border:#dcb05e 1px solid;
+    color: white;
+    border-radius: 14px;
+    width: 500px;
+    text-align: center;
+}
+
 button{
     color: white;
     border-bottom: #dcb05e 1px solid;
@@ -34,4 +42,14 @@ button:hover{
 
 .message{
     height: 70px;
+}
+
+@media screen and (max-width: 400px) {
+    input{
+        width: 200px;
+    }
+    
+    textarea{
+        width: 200px;
+    }
 }
