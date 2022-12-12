@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-$font_family: "Lucida Sans";
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap');
+
+$font_family: "Karla";
 
 * {
   font-family: $font_family;
