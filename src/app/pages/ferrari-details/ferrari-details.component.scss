@@ -21,7 +21,10 @@
     border-radius: 20px;
 }
 .btn-container{
-    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 40px;
 }
 
 .btn-details:hover{
