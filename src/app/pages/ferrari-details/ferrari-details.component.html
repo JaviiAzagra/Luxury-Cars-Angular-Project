@@ -3,9 +3,9 @@
     <p>{{myFerrari?.name}}</p>
     <img class="img-details" src="{{myFerrari?.img}}" alt="{{myFerrari?.name}}">
     <div class="details">
-    <p>Precio: {{myFerrari?.price}} €</p>
-    <p>Caballos de Potencia: {{myFerrari?.power_cv}} CV</p>
-    <p>Velocidad Máxima: {{myFerrari?.max_speed}}</p>
+    <p>Precio: <span>{{myFerrari?.price}} €</span></p>
+    <p>Caballos de Potencia: <span>{{myFerrari?.power_cv}} CV</span></p>
+    <p>Velocidad Máxima: <span>{{myFerrari?.max_speed}}</span></p>
     <div class="btn-container">
         <button class="btn-details" routerLink="/lamborghini">Volver a todos los coches</button>
         <button class="btn-details" routerLink="/updateFerrari/{{myFerrari?._id}}">Update</button>

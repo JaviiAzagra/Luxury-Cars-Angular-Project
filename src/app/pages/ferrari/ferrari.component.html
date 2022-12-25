@@ -1,24 +1,30 @@
-<div class="ferrari">
+<div class="ferrari-box">
+  <div class="ferrari">
     <!-- <h1>Ferrari</h1> -->
-</div>
-<h1 class="title-ferrari">Ferrari</h1>
-<div class="container">
-
+  </div>
+  <h1 class="title-ferrari">Ferrari</h1>
+  <div class="container">
     <img
-  *ngIf="!myFerraris"   
-  width="200px"
-  src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/02b374101705095.5f24d5db1096f.gif"
-  alt="gif loading"
-/>
-<h3 *ngIf="!myFerraris">Cargando todos los coches</h3>
-<div class="lambo-card" *ngFor= "let item of myFerraris" >
-    <div class="title-container">
-        <h2 class="model">{{item.model}}</h2>
-        <p>{{item.name}}</p>
+      *ngIf="!myFerraris"
+      width="200px"
+      src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/02b374101705095.5f24d5db1096f.gif"
+      alt="gif loading"
+    />
+    <h3 *ngIf="!myFerraris">Cargando todos los coches</h3>
+    <div class="lambo-card" *ngFor="let item of myFerraris">
+      <div class="title-container">
+        <h2 class="model">{{ item.model }}</h2>
+        <p>{{ item.name }}</p>
+      </div>
+      <div class="img-container">
+        <img
+          routerLink="/ferrari/{{ item._id }}"
+          class="lambo-card-img"
+          src="{{ item.img }}"
+          alt="{{ item.name }}"
+        />
+      </div>
+      <!-- <button class="button" routerLink="/ferrari/{{item._id}}">Mas detalles</button> -->
     </div>
-    <div class="img-container">
-        <img routerLink="/ferrari/{{item._id}}" class="lambo-card-img" src="{{item.img}}" alt="{{item.name}}">
-    </div>
-    <!-- <button class="button" routerLink="/ferrari/{{item._id}}">Mas detalles</button> -->
-</div>
+  </div>
 </div>
