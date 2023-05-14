@@ -1,6 +1,6 @@
-<div class="container-nav">
-  <nav class="nav">
-    <div class="nav__logo">
+<header class="header">
+  <h1 class="header__h1">
+    <div router routerLink="/" class="nav__title">
       <img 
         routerLink=""
         class="logo-img"
@@ -8,12 +8,32 @@
         alt="logo"
       />
     </div>
-    <div class="nav__menu">
-      <a router routerLink="">Inicio</a>
-      <a routerLink="lamborghini">Lamborghini</a>
-      <a routerLink="ferrari">Ferrari</a>
-      <a routerLink="contact">Contacto</a>
-      <a routerLink="newcar">New Car</a>
+  </h1>
+
+  <button (click)="setActive()" class="header__button">
+    <svg
+      class="header__svg"
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="currentColor"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+      />
+    </svg>
+  </button>
+
+  <nav class="header__nav" [ngClass]="{ 'header__nav--activo': active }">
+
+    <div class="header__ul">
+      <a class="header__li" router routerLink="">Inicio</a>
+      <a class="header__li" routerLink="lamborghini">Lamborghini</a>
+      <a class="header__li" routerLink="ferrari">Ferrari</a>
+      <a class="header__li" routerLink="contact">Contacto</a>
+      <a class="header__li" routerLink="newcar">New Car</a>
     </div>
   </nav>
-</div>
+</header>
